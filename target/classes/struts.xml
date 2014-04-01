@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">  
+<struts>  
+    <constant name="struts.objectFactory" value="spring" />  
+    <constant name="struts.devMode" value="true" />  
+    <constant name="struts.configuration.xml.reload" value="true" />  
+    <constant name="struts.i18n.encoding" value="utf-8" />  
+    <package name="defaultPackage" namespace="/" extends="struts-default">  
+          
+    <action name="userAction" class="userAction" method="reg">  
+        <result name="success">WEB-INF/jsp/success.jsp</result>  
+        <result name="error">WEB-INF/error.jsp</result>  
+    </action>  
+    <action name="loginAction" class="loginAction">  
+        <result name="success">WEB-INF/jsp/index.jsp</result>  
+    </action>
+    </package>  
+</struts>  
